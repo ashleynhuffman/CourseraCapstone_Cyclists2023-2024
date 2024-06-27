@@ -2,11 +2,11 @@
 
 Hello and welcome! This is my capstone project for Google's Data Analytics Professional Certificate on Coursera. For this capstone I chose to work with data provided by the course on rental bike usage.
 
-## Scenario##
+## Scenario
 
 *You are a junior data analyst working on the marketing analyst team at Cyclistic, a bike-share company in Chicago. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. Therefore, your team wants to understand how casual riders and annual members use Cyclistic bikes differently. From these insights, your team will design a new marketing strategy to convert casual riders into annual members. But first, Cyclistic executives must approve your recommendations, so they must be backed up with compelling data insights and professional data visualizations.*
 
-## Stakeholders##  
+## Stakeholders  
 
 **Company:** Cyclistics  
 
@@ -15,7 +15,7 @@ Hello and welcome! This is my capstone project for Google's Data Analytics Profe
 **Audience:** Cyclistic executive team  
 
 
-## ASK##  
+## ASK  
 
 How do annual members and casual riders use Cyclistic bikes differently?  
 Provide a report with the following deliverables:   
@@ -26,11 +26,11 @@ Provide a report with the following deliverables:
 5. Supporting visualizations and key findings
 6. Your top three recommendations based on your analysis
 
-## Prepare##  
+## Prepare  
 
 The capstone assignment provided a link to the company's ride history, found [here](https://divvy-tripdata.s3.amazonaws.com/index.html) I downloaded the data from May 2023 to April 2024.
 
-## Process##  
+## Process  
 
 I first opened each of the 12 speadsheets and created a column called ride_length. Then used a function to calculated the ride length by subtracting the started_at from the ended_at columns. I created a day_of_week column and populated the rows by using the WEEKDAY function. 
 I then cleaned the data by removing duplicates and unnecessary columns.  
@@ -211,7 +211,7 @@ WHERE ride_minutes >= 5 AND ride_minutes < 720;
 
 ```
 
-## Analyze##
+## Analyze
 
 First, I wanted to get a summary of the ride distribution between the two types of customers. I ran the following query to find that members \(62.14\) used the service roughtly 25% more than casual customers \(37.86\).
 
