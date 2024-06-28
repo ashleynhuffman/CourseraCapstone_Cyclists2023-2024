@@ -68,7 +68,7 @@ UPDATE
 SET
   day_of_week =
     CASE
-      WHEN day_of_week = '1' THEN 'Sunay'
+      WHEN day_of_week = '1' THEN 'Sunday'
       WHEN day_of_week = '2' THEN 'Monday'
       WHEN day_of_week = '3' THEN 'Tuesday'
       WHEN day_of_week = '4' Then 'Wednesday'
@@ -275,3 +275,40 @@ SELECT
     member_casual,
     rideable_type
 ```
+To find out which customer type uses the services on which day of the week I ran the following query:  
+```sql
+SELECT 
+  day_of_week,
+  member_casual,
+  count(member_casual) AS number_of_rides,
+ FROM `tribal-thought-424101-q7.monthly_bike_usage.final_bike_use_table`
+ GROUP BY
+  day_of_week,
+  member_casual
+  ORDER BY
+        CASE
+          WHEN day_of_week= 'Sunday' THEN 1
+          WHEN day_of_week= 'Monday' THEN 2
+          WHEN day_of_week= 'Tuesday' THEN 3
+          WHEN day_of_week='Wednesday' THEN 4
+          WHEN day_of_week='Thursday' THEN 5
+          WHEN day_of_week='Friday' THEN 6
+          WHEN day_of_week='Saturday' THEN 7
+        END ASC,
+    member_casual
+```
+## Share    
+
+Please see my Tableau story for my presentation.
+[My Tableau Story](https://public.tableau.com/views/GoogleDataAnalyticsCapstone_17195496982120/Story1?:language=en-US&:sid=&:display_count=n&:origin=viz_share_link)    
+
+## Act    
+
+As shown in my Tableau story, my 3 suggestions are as follows:
+1. We can highlight the benefits of using Cyclistic daily to casual riders. Possibly create a rewards system to earn free rides with consistant usage.
+2. Offer a free or discounted membership for the first month to new subscribers.
+3. Give our current memebers a gift code to give to friends. This code can be used for a free ride to new users. When the gift code is used and a new subscriber account is made, the current member gets a free ride as well.    
+
+## Final Thoughts  
+
+This was challenging but enjoyable. I used a lot of the teachings within the Google Data Analytics Certification program but I also had to Google a lot of this. I think my biggest struggle was getting Tableau to work with me, but once I got into the groove all was easy! Now I'm on to the next. I have begun the Google Advanced Data Analytics Program.
